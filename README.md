@@ -12,10 +12,13 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-
 <div align='center'>
   ### Hi there 👋
-  <img src='https://media.giphy.com/media/WTjXuYA2y4o3UZly3W/giphy.gif' width='100' height='100'>
+  </div>
+
+<div align='center'>
+  
+  <img src='https://media.giphy.com/media/WTjXuYA2y4o3UZly3W/giphy.gif' width='200' height='100'>
   <div id="badges" align='center'>
   <a href="your-linkedin-URL">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
