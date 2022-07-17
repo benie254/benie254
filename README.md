@@ -16,7 +16,7 @@ Here are some ideas to get you started:
 -->
 
 <div align='center'>
-  <img src='https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif'>
+  <img src=''>
 </div>  
 
 <div id="badges" align='center'>
@@ -34,9 +34,8 @@ Here are some ideas to get you started:
 
 - :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-kakbar-blue?style=flat&logo=Linkedin&logoColor=white)](your-linkedin-url)
 
-### :hammer_and_wrench: Languages and Tools :
-
 ---
+### :hammer_and_wrench: Languages and Tools :
 
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/angularjs/angularjs-original.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
