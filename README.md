@@ -13,12 +13,12 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 <div align='center'>
-  ### Hi there 👋
+### Hi there 👋
   </div>
 
 <div align='center'>
   
-  <img src='https://media.giphy.com/media/WTjXuYA2y4o3UZly3W/giphy.gif' width='200' height='100'>
+  <img src='https://media.giphy.com/media/WTjXuYA2y4o3UZly3W/giphy.gif' width='200' height='150'>
   <div id="badges" align='center'>
   <a href="your-linkedin-URL">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
