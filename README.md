@@ -17,12 +17,11 @@ Here are some ideas to get you started:
 
 
 <div align='center'>
+  <img src='https://media.giphy.com/media/WTjXuYA2y4o3UZly3W/giphy.gif' width='200' height='150'>
+  
   <a href='https://www.linkedin.com/in/benson-langat-fullstack-developer'>
   <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
-  
-  <img src='https://media.giphy.com/media/WTjXuYA2y4o3UZly3W/giphy.gif' width='200' height='150'>
-  
   <a href="https://twitter.com/benie_langat">
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
   </a>
