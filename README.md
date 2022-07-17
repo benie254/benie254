@@ -12,9 +12,9 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-<div align='center'>
+
 ### Hi there 👋
-  </div>
+
 
 <div align='center'>
   
