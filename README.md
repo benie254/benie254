@@ -20,10 +20,10 @@ Here are some ideas to get you started:
   
   <img src='https://media.giphy.com/media/WTjXuYA2y4o3UZly3W/giphy.gif' width='200' height='150'>
   <div id="badges" align='center'>
-  <a href="your-linkedin-URL">
+  <a href="www.linkedin.com/in/benson-langat-fullstack-developer">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
-  <a href="your-twitter-URL">
+  <a href="https://twitter.com/benie_langat">
     <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
   </a>
 </div>
@@ -36,7 +36,7 @@ I am a full-stack Python & Angular developer.
 
 - :memo:And a passionate writer.
 - :superhero_man:I enjoy solving problems!
-- :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-kakbar-blue?style=flat&logo=Linkedin&logoColor=white)](your-linkedin-url)
+- :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-benie-blue?style=flat&logo=Linkedin&logoColor=white)](www.linkedin.com/in/benson-langat-fullstack-developer)
 
 ---
 ### :hammer_and_wrench: Languages and Tools :
