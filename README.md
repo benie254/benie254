@@ -34,8 +34,7 @@ Here are some ideas to get you started:
 ### :man_technologist: About Me :
 I am a full-stack Python & Angular developer.
 
-- :memo:
-:pencil:And a passionate writer.
+- :memo::And a passionate writer.
 - :superhero_man:I enjoy solving problems!
 - :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-kakbar-blue?style=flat&logo=Linkedin&logoColor=white)](your-linkedin-url)
 
