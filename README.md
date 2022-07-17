@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 
 ### Hi there 👋
 
-[<img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>](www.linkedin.com/in/benson-langat-fullstack-developer)
+[<img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>](https://www.linkedin.com/in/benson-langat-fullstack-developer)
 <div align='center'>
   
   <img src='https://media.giphy.com/media/WTjXuYA2y4o3UZly3W/giphy.gif' width='200' height='150'>
