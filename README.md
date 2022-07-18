@@ -31,7 +31,7 @@ Here are some ideas to get you started:
 
 ---
 
-### :man_technologist: About Me :
+### :man_technologist: About Me 
 I am a full-stack Python & Angular developer.
 
 - :memo:And a passionate writer.
@@ -39,7 +39,7 @@ I am a full-stack Python & Angular developer.
 - :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-benie-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/benson-langat-fullstack-developer)
 
 ---
-### :hammer_and_wrench: Languages and Tools :
+### :hammer_and_wrench: Languages and Tools 
 
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/angularjs/angularjs-original.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
@@ -53,7 +53,7 @@ I am a full-stack Python & Angular developer.
 ---
 
 
-### :fire: My Stats :
+### :fire: Stats :
 
 [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=benie254&theme=dark&background=000000)](https://git.io/streak-stats)
 
