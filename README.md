@@ -53,7 +53,7 @@ I am a full-stack Python & Angular developer.
 ---
 
 
-### :fire: Stats :
+### :fire: Stats
 
 [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=benie254&theme=dark&background=000000)](https://git.io/streak-stats)
 
