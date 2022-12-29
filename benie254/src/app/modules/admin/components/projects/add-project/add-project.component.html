@@ -1,0 +1,111 @@
+<div class="container">
+    <div class="padding-2">
+        <div class="row">
+          <div class="col-md-6">
+            <form #projectForm="ngForm" class="bg-light rounded padding-2" (ngSubmit)="addItem(projectForm.value)" id="projectForm">
+              <h2>Add Project</h2>  <br>
+              <mat-form-field class="w-75" appearance="fill">
+                <mat-label>ID</mat-label>
+                <input matInput type="number" name="id" #id="ngModel" ngModel required>
+                <mat-error *ngIf="id.hasError('required') || id.pristine">
+                    ID is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <br>
+              <mat-form-field class="w-75" appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" name="name" #name="ngModel" ngModel required>
+                    <mat-error *ngIf="name.hasError('required') || name.pristine">
+                        Name is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="w-75" appearance="fill">
+                    <mat-label>Description</mat-label>
+                    <input matInput type="text" name="description" #description="ngModel" ngModel required>
+                    <mat-error *ngIf="description.hasError('required') || description.pristine">
+                        Description is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                 
+                
+            <br>
+            <mat-form-field class="w-75" appearance="fill">
+              <mat-label>Long Description</mat-label>
+              <input matInput type="text" name="long_description" #long_description="ngModel" ngModel required>
+              <mat-error *ngIf="long_description.hasError('required') || long_description.pristine">
+                Long Description is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+           
+          
+      <br>
+      <mat-form-field class="w-75" appearance="fill">
+        <mat-label>Featured Image</mat-label>
+        <input matInput type="url" name="featured_img" #featured_img="ngModel" ngModel required>
+        <mat-error *ngIf="featured_img.hasError('required') || featured_img.pristine">
+          Featured Image is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+     
+    
+<br>
+<mat-form-field class="w-75" appearance="fill">
+  <mat-label>Screenshot One</mat-label>
+  <input matInput type="url" name="screenshot_one" #screenshot_one="ngModel" ngModel required>
+  <mat-error *ngIf="screenshot_one.hasError('required') || screenshot_one.pristine">
+    Screenshot One is <strong>required</strong>
+  </mat-error>
+</mat-form-field>
+
+
+<br>
+<mat-form-field class="w-75" appearance="fill">
+  <mat-label>Screenshot Two</mat-label>
+  <input matInput type="url" name="screenshot_two" #screenshot_two="ngModel" ngModel required>
+  <mat-error *ngIf="screenshot_two.hasError('required') || screenshot_two.pristine">
+    Screenshot Two is <strong>required</strong>
+  </mat-error>
+</mat-form-field>
+
+
+<br>
+<mat-form-field class="w-75" appearance="fill">
+  <mat-label>Screenshot Three</mat-label>
+  <input matInput type="url" name="screenshot_three" #screenshot_three="ngModel" ngModel required>
+  <mat-error *ngIf="screenshot_three.hasError('required') || screenshot_three.pristine">
+    Screenshot Three is <strong>required</strong>
+  </mat-error>
+</mat-form-field>
+
+
+<br>
+
+                  <mat-form-field class="w-75" appearance="fill">
+                    <mat-label>Technologies </mat-label>
+                      <input matInput type="text" name="technologies" #technologies="ngModel" ngModel required>
+                      <mat-error *ngIf="technologies.hasError('required') || technologies.pristine">
+                        This field is <strong>required</strong>
+                      </mat-error>
+                  </mat-form-field>
+
+
+                 <br>
+                 <mat-form-field class="w-75" appearance="fill">
+                  <mat-label>Live Link</mat-label>
+                  <input matInput type="url" name="live_link" #live_link="ngModel" ngModel required>
+                  <mat-error *ngIf="live_link.hasError('required') || live_link.pristine">
+                    Live Link is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+                  
+                  <div class="form-group bg-light">
+                    <button type="submit" style="margin-top:1%;" mat-raised-button color="accent" [disabled]="projectForm.invalid" (click)="reload()">Save</button> &nbsp;&nbsp; <button type="submit" (click)="reset();" style="margin-top:1%;" mat-flat-button color="accent" [disabled]="projectForm.invalid">Save and add another</button>
+                  </div>
+                  
+            </form>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+    </div>
+</div>
