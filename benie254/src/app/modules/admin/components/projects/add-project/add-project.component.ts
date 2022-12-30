@@ -20,8 +20,11 @@ export class AddProjectComponent implements OnInit {
   ngOnInit(): void {
   }
   addItem(data: any){
-    this.projectService.add(data);
-    Notiflix.Notify.success('Added!');
+    this.projectService.postProject(data).subscribe({
+      next: (res) => {
+        Notiflix.Notify.success('Added!');
+      }
+    })
   }
   reset(){
     const form = (<HTMLFormElement>document.getElementById('projectForm'));
