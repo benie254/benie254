@@ -1,10 +1,10 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormControl,FormGroup } from '@angular/forms';
 import * as Notiflix from 'notiflix';
+import { MyProjectsService } from 'src/app/services/projects/my-projects.service';
 import { AuthService } from '../../../auth/services/auth/auth.service';
 import { User } from '../../../classes/user/user';
 import { ProjectService } from '../../../services/project/project.service';
-import { StoryService } from '../../../services/story/story.service';
 
 @Component({
   selector: 'app-edit-project',
@@ -22,36 +22,43 @@ export class EditProjectComponent implements OnInit {
   chapDetails: any;
   chapDes = new FormControl('');
   constructor(
-    private service:StoryService,
     private auth:AuthService,
-    private projectService:ProjectService,
+    private projectService:MyProjectsService,
+    private projectsService:ProjectService,
   ) { }
 
   ngOnInit(): void {
     this.itemDetails();
-    this.details = this.myList.find(this.byId);
-    console.warn("det",this.details)
     // if(this.auth.currentUserValue){
     //   this.currentUser = this.auth.currentUserValue;
     // }else{
     //   !this.currentUser;
     // }
   }
-  editItem(data: any){
-    
-  }
-  byId(project){
-    return project.id === this.selected;
-  }
   itemDetails(){
-    this.details = this.myList.find(this.byId);
-    console.warn("det",this.details)
-    // this.details === this.projectService.projects.id
-    // Notiflix.Loading.dots('Loading...');
-    
+    this.projectService.getProjectDetails(this.selected).subscribe({
+      next: (res) => {
+        this.details = res;
+      }
+    })
+  }
+  editItem(data: any){
+    this.projectsService.editProject(this.selected, data).subscribe({
+      next: (res) => {
+        Notiflix.Notify.success("Updated!")
+      }
+    })
   }
   delete(){
-    
+    this.projectsService.deleteProject(this.selected).subscribe({
+      next: (res) => {
+        Notiflix.Report.success(
+          "Deleted!",
+          "The project was deleted successfully.",
+          'Great',
+        )
+      }
+    })
   }
   delWarn(){
     Notiflix.Confirm.show(

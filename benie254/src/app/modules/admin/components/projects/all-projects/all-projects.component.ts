@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as Notiflix from 'notiflix';
+import { MyProjectsService } from 'src/app/services/projects/my-projects.service';
 import { AuthService } from '../../../auth/services/auth/auth.service';
 import { ProjectService } from '../../../services/project/project.service';
 
@@ -20,7 +21,7 @@ export class AllProjectsComponent implements OnInit {
   constructor(
     private auth: AuthService,
     private router: Router,
-    private projectService:ProjectService,
+    private projectService:MyProjectsService,
   ) { }
 
   ngOnInit(): void {
@@ -42,8 +43,11 @@ export class AllProjectsComponent implements OnInit {
     
   }
   allRecords(){
-    this.myList = JSON.parse(localStorage.getItem('myProjects'))
-    console.warn(this.myList)
+    this.projectService.getAllProjects().subscribe({
+      next: (res) => {
+        this.myList = res;
+      }
+    })
   }
   openForm = (): void => {
     this.showData = true;
