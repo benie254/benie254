@@ -1,0 +1,13 @@
+<div class="row text-center">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+        <mat-form-field class="w-100 text-center">
+            <input matInput type="text" placeholder="Search anything..." list="datalistOptions" id="exampleDataList" (change)="titleValue($any($event.target).value)" name="search" [(ngModel)]="searchText">
+            <mat-icon matSuffix>search</mat-icon>
+            <datalist id="datalistOptions">
+                <option value="Lomayo" *ngFor="let s of searchResults" [value]="s.title">  
+            </datalist>
+          </mat-form-field> 
+    </div>
+    <div class="col-lg-3"></div>
+</div>

@@ -1,0 +1,99 @@
+<span type="button" (click)="back()"><i class="fa-solid fa-chevron-left"></i> Back</span>
+<div class="container-fluid">
+    <br>
+    <h1 class="text-center">All Projects</h1>
+    <app-search></app-search>
+    <br>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card shadow mb-3 rounded padding-md"  style="max-width: 920px;">
+                <div class="text-center" >
+                  
+                  <img class="img-fluid" style="min-height:200px;max-width:300px;float:left;" src="{{imgURL}}"  alt="" priority>
+                  <h2>
+                    {{name}}
+                    <span>
+                        <h3 class="card-title text-center">
+                            {{shortDes}}
+                            <span>
+                                <h4>
+                                    <img src="https://res.cloudinary.com/benie/image/upload/c_scale,h_80/v1672366749/Untitled_design_llaglk-removebg-preview_voicis.png" alt=""> <img src="https://res.cloudinary.com/benie/image/upload/c_scale,h_35/v1672367197/Untitled_design__2_-removebg-preview_zf2qeg.png" alt=""> <img src="https://res.cloudinary.com/benie/image/upload/c_scale,h_70/v1672367375/Untitled_design__3_-removebg-preview_ndcswj.png" alt=""> <img src="https://res.cloudinary.com/benie/image/upload/c_scale,h_30/v1672367581/Untitled_design__4_-removebg-preview_mlwfbr.png" alt=""> <img src="https://res.cloudinary.com/benie/image/upload/c_scale,h_80/v1672367699/Untitled_design__5_-removebg-preview_yu3ktn.png" alt="">
+                                </h4>
+                            </span>
+                          </h3>
+                    </span>
+                  </h2>
+                  <div class="card-body">
+                    <p class="card-text">
+                        <span>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-4">
+                                    <i class="fa-solid fa-square-check"></i> Feature <br> 
+                                    <i class="fa-solid fa-square-check"></i> Feature <br>
+                                    <i class="fa-solid fa-square-check"></i> Feature
+                                </div>
+                                <div class="col-md-4">
+                                    <i class="fa-solid fa-square-check"></i> Feature <br> 
+                                    <i class="fa-solid fa-square-check"></i> Feature <br>
+                                    <i class="fa-solid fa-square-check"></i> Feature
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </span>
+                    </p>
+                    <!-- <p class="card-text"><small><span><button mat-raised-button color="accent" class="w-25" routerLink="/read/story/{{s.id}}">Read</button></span></small></p> -->
+                  </div>
+                    <button mat-stroked-button color="primary" [routerLink]="'/project/details/1'" class="w-100"><i class="fa-solid fa-eye"></i> Details</button>
+                  
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card shadow mb-3 rounded padding-md"  style="max-width: 920px;">
+                <div class="text-center" >
+                  
+                  <img class="img-fluid" style="min-height:200px;max-width:300px;float:left;" src="{{imgURL}}"  alt="" priority>
+                  <h2>
+                    {{name}}
+                    <span>
+                        <h3 class="card-title text-center">
+                            {{shortDes}}
+                            <span>
+                                <h4>
+                                    <img src="https://res.cloudinary.com/benie/image/upload/c_scale,h_80/v1672366749/Untitled_design_llaglk-removebg-preview_voicis.png" alt=""> <img src="https://res.cloudinary.com/benie/image/upload/c_scale,h_35/v1672367197/Untitled_design__2_-removebg-preview_zf2qeg.png" alt=""> <img src="https://res.cloudinary.com/benie/image/upload/c_scale,h_70/v1672367375/Untitled_design__3_-removebg-preview_ndcswj.png" alt=""> <img src="https://res.cloudinary.com/benie/image/upload/c_scale,h_30/v1672367581/Untitled_design__4_-removebg-preview_mlwfbr.png" alt=""> <img src="https://res.cloudinary.com/benie/image/upload/c_scale,h_80/v1672367699/Untitled_design__5_-removebg-preview_yu3ktn.png" alt="">
+                                </h4>
+                            </span>
+                          </h3>
+                    </span>
+                  </h2>
+                  <div class="card-body">
+                    <p class="card-text">
+                        <span>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-4">
+                                    <i class="fa-solid fa-square-check"></i> Feature <br> 
+                                    <i class="fa-solid fa-square-check"></i> Feature <br>
+                                    <i class="fa-solid fa-square-check"></i> Feature
+                                </div>
+                                <div class="col-md-4">
+                                    <i class="fa-solid fa-square-check"></i> Feature <br> 
+                                    <i class="fa-solid fa-square-check"></i> Feature <br>
+                                    <i class="fa-solid fa-square-check"></i> Feature
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </span>
+                    </p>
+                    <!-- <p class="card-text"><small><span><button mat-raised-button color="accent" class="w-25" routerLink="/read/story/{{s.id}}">Read</button></span></small></p> -->
+                  </div>
+                    <button mat-stroked-button color="primary" class="w-100" [routerLink]="'/project/details/1'"><i class="fa-solid fa-eye"></i> Details</button>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+</div>
+<app-footer></app-footer>

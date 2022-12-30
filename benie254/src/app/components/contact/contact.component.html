@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <h2 class="text-center">Reach me</h2>
+    <div class="row">
+        <div class="col-lg-5">
+            <mat-list class="shadow rounded">
+                <mat-list-item><i class="fa-solid fa-user"></i> &nbsp; {{name}}</mat-list-item>
+                <a href="mailto:fullstack.benie@gmail.com"><mat-list-item active><i class="fa-solid fa-envelope"></i> &nbsp; Email</mat-list-item></a>
+                <mat-list-item><i class="fa-solid fa-location-pin"></i> &nbsp; {{address}}</mat-list-item>
+                <mat-list-item><i class="fa-solid fa-city"></i> &nbsp; {{city}}</mat-list-item>
+            </mat-list>
+        </div>
+        <div class="col-lg-7">
+            <form #contForm="ngForm" class="shadow" (ngSubmit)="contact(contForm.value)" (mouseover)="onKey($event)" (keydown)="onKey($event)" (keypress)="onKey($event)" (keyup)="onKey($event)">
+                
+                
+                        
+                        <mat-form-field appearance="fill" class="w-100">
+                            <mat-label>Message</mat-label>
+                            <textarea matInput name="message" placeholder="Type your message here..." ngModel #message="ngModel" required></textarea>
+                            <mat-error *ngIf="message.hasError('required') || message.pristine">
+                                Message is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                        <div class="row" *ngIf="!noInput">
+                            <div class="col-md-6">
+                                <mat-form-field appearance="fill" class="w-100">
+                                    <mat-label>Name</mat-label>
+                                    <input matInput name="name" placeholder="Enter your name..." ngModel #name="ngModel" required>
+                                    <mat-error *ngIf="name.hasError('required') || name.pristine">
+                                        Your name is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field appearance="fill" class="w-100">
+                                    <mat-label>Email</mat-label>
+                                    <input matInput name="email" placeholder="Enter email address..." ngModel #email="ngModel" required>
+                                    <mat-error *ngIf="email.hasError('required') || email.pristine">
+                                        Your email is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        
+                        <button mat-raised-button color="primary" class="w-100" [disabled]="contForm.invalid"><i class="fa-regular fa-paper-plane"></i> Send Email</button>
+            </form>
+        </div>
+    </div>
+</div>

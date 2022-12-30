@@ -1,9 +1,9 @@
 
-<nav  class="navbar navbar-expand-lg opacity" style="background-color:white;">
+<nav  class="navbar navbar-expand-lg bg-light sticky-top">
     <div class="container-fluid" >
       <a class="navbar-brand" href="/">
         <img src="https://res.cloudinary.com/benie/image/upload/v1671555324/h02js8etvetdr5ctbmtf-removebg-preview_wge6nt.png" height="25" width="25" style="border-radius:50%;" alt="">
-        <span class="brand-font font-md-2" style="color:blueviolet">Benson Langat </span>
+        <span class="brand-font font-md-2" style="color:blueviolet">BENSON LANGAT </span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -14,11 +14,17 @@
         </ul>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a style="color:orange" class="nav-link active font-md-3 brand-font" aria-current="page" [routerLink]="'/'">Welcome <i class="fa-solid fa-house"></i></a>
+            <a style="color:blueviolet" class="nav-link active font-md-3 brand-font" routerLink="/projects/all"><i class="fa-solid fa-magnifying-glass"></i> SEARCH</a>
+          </li>
+          <li class="nav-item">
+            <a style="color:orange" class="nav-link active font-md-3 brand-font" aria-current="page">FULL-STACK SOFTWARE DEVELOPER</a>
+          </li>
+          <li class="nav-item">
+            <a style="color:blueviolet" class="nav-link active font-md-3 brand-font" routerLink="/about"><i class="fa-solid fa-user"></i> ABOUT</a>
           </li>
         </ul>
         <div>
-          <p style="color:blueviolet"><i class="fa-solid fa-book-open-reader"></i> 10 projects</p>
+          <p style="color:blueviolet" type="button" routerLink="/projects/all"><i class="fa-solid fa-book-open-reader"></i> 10 PROJECTS</p>
             
           </div>
       </div>

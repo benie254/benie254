@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+       <form #likeForm="ngForm" (ngSubmit)="(likeProject(likeForm.value))">
+        
+        <input type="text" name="like" ngModel style="display:none;" [(ngModel)]="liked">
+        <input type="number" name="project" ngModel style="display:none;">
+        <button mat-raised-button color="accent" type="submit"><i class="fa-regular fa-star"></i> Vote <span style="font-size:x-small;">10 votes</span></button> 
+       </form> 
+    </div>
+    <div class="col-md-6">
+        <form #commentForm="ngForm" (ngSubmit)="commentProject(commentForm.value)" (mouseover)="onKey($event)" (keydown)="onKey($event)" (keypress)="onKey($event)" (keyup)="onKey($event)">
+            <mat-form-field appearance="fill">
+                <mat-label color="accent">Comment</mat-label>
+                <input type="number" name="project" ngModel style="display:none;">
+                <input type="text" matInput ngModel name="comment">
+            </mat-form-field>
+            <div *ngIf="!noInput">
+                <mat-form-field>
+                    <mat-label color="accent">Name</mat-label>
+                    <input name="commented_by" matInput ngModel type="text">
+                </mat-form-field>
+            </div>
+            &nbsp;<button mat-raised-button color="accent" *ngIf="!noInput" type="submit">Add <i class="fa-regular fa-comment"></i></button>
+        </form>
+    </div>
+    <div class="col-md-1"></div>
+</div>
