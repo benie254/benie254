@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "benie254",
+    "public": "dist/benie254",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
