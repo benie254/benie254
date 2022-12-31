@@ -25,4 +25,32 @@
         </form>
     </div>
     <div class="col-md-1"></div>
+    <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+<mat-panel-title>
+View all
+</mat-panel-title>
+<mat-panel-description>
+3 comments
+</mat-panel-description>
+</mat-expansion-panel-header>
+<p class="shadow padding-md">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe odit facilis velit autem commo
+    <br>
+    <span class="text-muted"><small><i class="fa-regular fa-user"></i> Janja &nbsp;&nbsp;|&nbsp;&nbsp; 2 minutes ago</small></span>
+</p>
+<p class="shadow padding-md">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe odit facilis velit autem commo
+    <br>
+    <span class="text-muted"><small><i class="fa-regular fa-user"></i> Aziel &nbsp;&nbsp;|&nbsp;&nbsp; 5 minutes ago</small></span>
+</p>
+<p class="shadow padding-md">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe odit facilis velit autem commo
+    <br>
+    <span class="text-muted"><small><i class="fa-regular fa-user"></i> Anonymous &nbsp;&nbsp;|&nbsp;&nbsp; 12 minutes ago</small></span>
+</p>
+</mat-expansion-panel>
+</mat-accordion>
 </div>

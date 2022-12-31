@@ -23,6 +23,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { AllProjectsComponent } from './components/projects/all-projects/all-projects.component';
 import { ProjectDetailsComponent } from './components/projects/project-details/project-details.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
@@ -58,6 +59,7 @@ import { SearchComponent } from './components/search/search.component';
     MatInputModule,
     MatListModule,
     MatIconModule,
+    MatExpansionModule,
   ],
   providers: [
     {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as Notiflix from 'notiflix';
 
 @Component({
   selector: 'app-contact',
@@ -18,7 +19,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
   contact(data){
-    
+    Notiflix.Notify.success("Message Sent!")
   }
   onKey(event: any){
     this.values = event.target.value;

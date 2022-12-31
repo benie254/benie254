@@ -8,14 +8,16 @@ import * as Notiflix from 'notiflix';
 })
 export class ProjectDetailsComponent implements OnInit {
   projectLink: any;
-  testerURL = 'https://tester.co.ke';
+  repoLink: any;
+  projectURL = 'https://benie.web.app/';
+  repoURL = 'https://github.com/benie254/BenieWrites/'
 
   constructor() { }
 
   ngOnInit(): void {
   }
   myLink(){
-    this.copyLink(this.testerURL);
+    this.copyLink(this.projectURL);
   }
   copyLink(text: any){
     localStorage.setItem('myLink',text);
@@ -25,7 +27,19 @@ export class ProjectDetailsComponent implements OnInit {
   }
   clipBoard(text: any){
     navigator.clipboard.writeText(text);
-    Notiflix.Notify.success('Link Copied!')    
+    Notiflix.Notify.success('Demo Link Copied!')    
+  }
+  myGit(){
+    this.copyGit(this.repoURL);
+  }
+  copyGit(text: any){
+    localStorage.setItem('myGit',text);
+    this.repoLink = localStorage.getItem('myGit')
+    this.clipGit(this.repoLink)
+  }
+  clipGit(text: any){
+    navigator.clipboard.writeText(text);
+    Notiflix.Notify.success('Repo Link Copied!')    
   }
   back(){
     history.back();
