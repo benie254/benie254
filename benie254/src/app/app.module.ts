@@ -28,6 +28,7 @@ import { AllProjectsComponent } from './components/projects/all-projects/all-pro
 import { ProjectDetailsComponent } from './components/projects/project-details/project-details.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { SearchComponent } from './components/search/search.component';
+import {MatChipsModule} from '@angular/material/chips';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -83,6 +84,7 @@ const analytics = getAnalytics(app);
     MatListModule,
     MatIconModule,
     MatExpansionModule,
+    MatChipsModule,
   ],
   providers: [
     {
