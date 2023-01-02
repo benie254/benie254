@@ -1,16 +1,16 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormControl,FormGroup } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import * as Notiflix from 'notiflix';
-import { MyProjectsService } from 'src/app/services/projects/my-projects.service';
 import { AuthService } from '../../../auth/services/auth/auth.service';
 import { User } from '../../../classes/user/user';
 import { ProjectService } from '../../../services/project/project.service';
 
 @Component({
-  selector: 'app-edit-project',
-  templateUrl: './edit-project.component.html',
+  selector: 'app-edit-feature',
+  templateUrl: './edit-feature.component.html',
+  styleUrls: ['./edit-feature.component.less']
 })
-export class EditProjectComponent implements OnInit {
+export class EditFeatureComponent implements OnInit {
   delConfirmed: boolean = false;
   currentUser!: User;
   @Input() selected: any
@@ -21,38 +21,23 @@ export class EditProjectComponent implements OnInit {
   details!: any;
   chapDetails: any;
   chapDes = new FormControl('');
-  allFeats: any;
   constructor(
     private auth:AuthService,
-    private projectService:MyProjectsService,
-    private projectsService:ProjectService,
+    private featService:ProjectService,
   ) { }
 
   ngOnInit(): void {
     this.itemDetails();
-    // if(this.auth.currentUserValue){
-    //   this.currentUser = this.auth.currentUserValue;
-    // }else{
-    //   !this.currentUser;
-    // }
-    this.allFeatures();
-  }
-  allFeatures(){
-    this.projectsService.getAllFeatures().subscribe({
-      next: (res: any) => {
-        this.allFeats = res;
-      }
-    })
   }
   itemDetails(){
-    this.projectService.getProjectDetails(this.selected).subscribe({
+    this.featService.getFeatureDetails(this.selected).subscribe({
       next: (res) => {
         this.details = res;
       }
     })
   }
   editItem(data: any){
-    this.projectsService.editProject(this.selected, data).subscribe({
+    this.featService.editFeature(this.selected, data).subscribe({
       next: (res) => {
         Notiflix.Notify.success("Updated!")
       }
@@ -60,12 +45,12 @@ export class EditProjectComponent implements OnInit {
   }
   delete(){
     Notiflix.Loading.arrows('Deleting...');
-    this.projectsService.deleteProject(this.selected).subscribe({
+    this.featService.deleteFeature(this.selected).subscribe({
       next: (res) => {
         Notiflix.Loading.remove();
         Notiflix.Report.success(
           "Deleted!",
-          "The project was deleted successfully.",
+          "The feature was deleted successfully.",
           'Great',
         )
       }
@@ -74,7 +59,7 @@ export class EditProjectComponent implements OnInit {
   delWarn(){
     Notiflix.Confirm.show(
       'Confirm delete',
-      "Are you sure you want to delete this project? This action cannot be undone",
+      "Are you sure you want to delete this feature? This action cannot be undone",
       "I'm sure",
       "Take me back",
       () => {

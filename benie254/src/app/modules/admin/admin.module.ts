@@ -21,7 +21,15 @@ import { FormsModule } from '@angular/forms';
 import { AddProjectComponent } from './components/projects/add-project/add-project.component';
 import { AllProjectsComponent } from './components/projects/all-projects/all-projects.component';
 import { EditProjectComponent } from './components/projects/edit-project/edit-project.component';
-
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
+import { AddTechnologyComponent } from './components/technologies/add-technology/add-technology.component';
+import { EditTechnologyComponent } from './components/technologies/edit-technology/edit-technology.component';
+import { AllTechnologiesComponent } from './components/technologies/all-technologies/all-technologies.component';
+import { AllFeaturesComponent } from './components/features/all-features/all-features.component';
+import { EditFeatureComponent } from './components/features/edit-feature/edit-feature.component';
+import { AddFeatureComponent } from './components/features/add-feature/add-feature.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +45,12 @@ import { EditProjectComponent } from './components/projects/edit-project/edit-pr
     AddProjectComponent,
     AllProjectsComponent,
     EditProjectComponent,
+    AddTechnologyComponent,
+    EditTechnologyComponent,
+    AllTechnologiesComponent,
+    AllFeaturesComponent,
+    EditFeatureComponent,
+    AddFeatureComponent,
   ],
   imports: [
     CommonModule,
@@ -47,6 +61,9 @@ import { EditProjectComponent } from './components/projects/edit-project/edit-pr
     MatInputModule,
     MatButtonModule,
     MatTabsModule,
+    MatChipsModule,
+    MatIconModule,
+    MatSelectModule,
   ]
 })
 export class AdminModule { }

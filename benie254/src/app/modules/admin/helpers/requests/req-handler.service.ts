@@ -63,10 +63,8 @@ export class ReqHandlerService {
         'Okay',
       )
     } else if (error.status === 404){
-      Notiflix.Report.warning(
-        error.statusText,
+      Notiflix.Notify.warning(
         'Sorry, we could not find or load the requested resource.',
-        'Okay',
       )
     } else if (error.status === 407){
       Notiflix.Report.warning(

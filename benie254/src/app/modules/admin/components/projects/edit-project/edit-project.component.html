@@ -14,10 +14,18 @@
                   </mat-form-field>
                   <br>
                   <mat-form-field class="w-75" appearance="fill">
+                    <mat-label>Summary</mat-label>
+                    <input matInput type="text" name="summary" #summary="ngModel" ngModel [(ngModel)]="details.summary" required>
+                    <mat-error *ngIf="summary.hasError('required') || summary.pristine">
+                        Summary is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+              <br>
+                  <mat-form-field class="w-75" appearance="fill">
                     <mat-label>Description</mat-label>
-                    <input matInput type="text" name="description" #description="ngModel" [(ngModel)]="details.description" ngModel required>
-                    <mat-error *ngIf="description.hasError('required') || description.pristine">
-                        Description is <strong>required</strong>
+                    <input matInput type="text" name="short_description" #short_description="ngModel" [(ngModel)]="details.short_description" ngModel required>
+                    <mat-error *ngIf="short_description.hasError('required') || short_description.pristine">
+                        Short description is <strong>required</strong>
                     </mat-error>
                   </mat-form-field>
                  
@@ -44,32 +52,15 @@
     
 <br>
 <mat-form-field class="w-75" appearance="fill">
-  <mat-label>Screenshot One</mat-label>
-  <input matInput type="url" name="screenshot_one" #screenshot_one="ngModel" [(ngModel)]="details.screenshot_one" ngModel required>
-  <mat-error *ngIf="screenshot_one.hasError('required') || screenshot_one.pristine">
-    Screenshot One is <strong>required</strong>
+  <mat-label>Screenshot</mat-label>
+  <input matInput type="url" name="screenshot" #screenshot="ngModel" [(ngModel)]="details.screenshot" ngModel required>
+  <mat-error *ngIf="screenshot.hasError('required') || screenshot.pristine">
+    Screenshot is <strong>required</strong>
   </mat-error>
 </mat-form-field>
 
 
 <br>
-<mat-form-field class="w-75" appearance="fill">
-  <mat-label>Screenshot Two</mat-label>
-  <input matInput type="url" name="screenshot_two" #screenshot_two="ngModel" [(ngModel)]="details.screenshot_two" ngModel required>
-  <mat-error *ngIf="screenshot_two.hasError('required') || screenshot_two.pristine">
-    Screenshot Two is <strong>required</strong>
-  </mat-error>
-</mat-form-field>
-
-
-<br>
-<mat-form-field class="w-75" appearance="fill">
-  <mat-label>Screenshot Three</mat-label>
-  <input matInput type="url" name="screenshot_three" #screenshot_three="ngModel" [(ngModel)]="details.screenshot_three" ngModel required>
-  <mat-error *ngIf="screenshot_three.hasError('required') || screenshot_three.pristine">
-    Screenshot Three is <strong>required</strong>
-  </mat-error>
-</mat-form-field>
 
 
 <br>
@@ -84,6 +75,25 @@
 
 
                  <br>
+                 <mat-form-field class="example-chip-list" appearance="fill">
+                  <mat-label>Features</mat-label>
+                  <div *ngIf="details.features">
+                    <input matInput type="text" name="features" ngModel #features="ngModel" [(ngModel)]="details.features" required multiple>
+                    
+                  </div>
+                  <div *ngIf="!details.features">
+                    
+                      <mat-select name="features" ngModel #features="ngModel" required multiple>
+                        <mat-option *ngFor="let f of allFeats" [value]="f.id">{{f.name}}</mat-option>
+                      </mat-select>
+                      
+                      <mat-error *ngIf="features.hasError('required') || features.pristine">
+                        This field is <strong>required</strong>
+                      </mat-error>
+                  </div>
+                  
+                </mat-form-field>
+                <br>
                  <mat-form-field class="w-75" appearance="fill">
                   <mat-label>Live Link</mat-label>
                   <input matInput type="url" name="live_link" #live_link="ngModel" [(ngModel)]="details.live_link" ngModel required>

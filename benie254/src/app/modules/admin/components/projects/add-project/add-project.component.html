@@ -21,10 +21,18 @@
                   </mat-form-field>
                   <br>
                   <mat-form-field class="w-75" appearance="fill">
+                    <mat-label>Summary</mat-label>
+                    <input matInput type="text" name="summary" #summary="ngModel" ngModel required maxlength="150">
+                    <mat-error *ngIf="summary.hasError('required') || summary.pristine">
+                        Summary is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+              <br>
+                  <mat-form-field class="w-75" appearance="fill">
                     <mat-label>Description</mat-label>
-                    <input matInput type="text" name="description" #description="ngModel" ngModel required>
-                    <mat-error *ngIf="description.hasError('required') || description.pristine">
-                        Description is <strong>required</strong>
+                    <input matInput type="text" name="short_description" #short_description="ngModel" ngModel required maxlength="5000">
+                    <mat-error *ngIf="short_description.hasError('required') || short_description.pristine">
+                        Short description is <strong>required</strong>
                     </mat-error>
                   </mat-form-field>
                  
@@ -32,7 +40,7 @@
             <br>
             <mat-form-field class="w-75" appearance="fill">
               <mat-label>Long Description</mat-label>
-              <input matInput type="text" name="long_description" #long_description="ngModel" ngModel required>
+              <input matInput type="text" name="long_description" #long_description="ngModel" ngModel required maxlength="300">
               <mat-error *ngIf="long_description.hasError('required') || long_description.pristine">
                 Long Description is <strong>required</strong>
               </mat-error>
@@ -51,43 +59,39 @@
     
 <br>
 <mat-form-field class="w-75" appearance="fill">
-  <mat-label>Screenshot One</mat-label>
-  <input matInput type="url" name="screenshot_one" #screenshot_one="ngModel" ngModel required>
-  <mat-error *ngIf="screenshot_one.hasError('required') || screenshot_one.pristine">
-    Screenshot One is <strong>required</strong>
+  <mat-label>Screenshot</mat-label>
+  <input matInput type="url" name="screenshot" #screenshot="ngModel" ngModel required>
+  <mat-error *ngIf="screenshot.hasError('required') || screenshot.pristine">
+    Screenshot is <strong>required</strong>
   </mat-error>
 </mat-form-field>
 
 
+
 <br>
-<mat-form-field class="w-75" appearance="fill">
-  <mat-label>Screenshot Two</mat-label>
-  <input matInput type="url" name="screenshot_two" #screenshot_two="ngModel" ngModel required>
-  <mat-error *ngIf="screenshot_two.hasError('required') || screenshot_two.pristine">
-    Screenshot Two is <strong>required</strong>
+<mat-form-field class="example-chip-list" appearance="fill">
+  <mat-label>Technologies</mat-label>
+  
+  <mat-select name="technologies" ngModel #technologies="ngModel" required multiple>
+    <mat-option *ngFor="let t of allTechs" [value]="t.id">{{t.name}}</mat-option>
+  </mat-select>
+  <mat-error *ngIf="technologies.hasError('required') || technologies.pristine">
+    This field is <strong>required</strong>
+  </mat-error>
+</mat-form-field><br>
+<mat-form-field class="example-chip-list" appearance="fill">
+  <mat-label>Features</mat-label>
+  
+  <mat-select name="features" ngModel #features="ngModel" required multiple>
+    <mat-option *ngFor="let f of allFeats" [value]="f.id">{{f.name}}</mat-option>
+  </mat-select>
+  <mat-error *ngIf="features.hasError('required') || features.pristine">
+    This field is <strong>required</strong>
   </mat-error>
 </mat-form-field>
 
-
-<br>
-<mat-form-field class="w-75" appearance="fill">
-  <mat-label>Screenshot Three</mat-label>
-  <input matInput type="url" name="screenshot_three" #screenshot_three="ngModel" ngModel required>
-  <mat-error *ngIf="screenshot_three.hasError('required') || screenshot_three.pristine">
-    Screenshot Three is <strong>required</strong>
-  </mat-error>
-</mat-form-field>
-
-
-<br>
-
-                  <mat-form-field class="w-75" appearance="fill">
-                    <mat-label>Technologies </mat-label>
-                      <input matInput type="text" name="technologies" #technologies="ngModel" ngModel required>
-                      <mat-error *ngIf="technologies.hasError('required') || technologies.pristine">
-                        This field is <strong>required</strong>
-                      </mat-error>
-                  </mat-form-field>
+                    
+                      
 
 
                  <br>

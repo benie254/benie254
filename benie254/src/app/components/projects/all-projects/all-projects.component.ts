@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyProjectsService } from 'src/app/services/projects/my-projects.service';
 
 @Component({
   selector: 'app-all-projects',
@@ -10,14 +11,26 @@ export class AllProjectsComponent implements OnInit {
   name = 'Project Title';
   shortDes = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, pariatur inci'
   longDes = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, pariatur incidunt neque autem, repudiandae expedita laboriosam asperiores itaque quod earum magnam nulla nihil quia reprehenderit illum eveniet, at excepturi optio.'
+  projects: any;
 
 
-  constructor() { }
+  constructor(
+    private projectService: MyProjectsService,
+  ) { }
 
   ngOnInit(): void {
+    this.allProjects();
   }
   back(){
     history.back();
+  }
+  allProjects(){
+    this.projectService.getAllProjects().subscribe({
+      next: (res: any) => {
+        this.projects = res;
+        console.warn(res);
+      }
+    })
   }
 
 }
